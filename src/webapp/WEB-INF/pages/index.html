@@ -10,6 +10,13 @@
     <th:block th:each="msg : ${messages}">
         <h1 th:text="${msg}"></h1>
     </th:block>
+    <br><br>
+    <br><br>
+    <a href="cars"><h2>Reference by cars table</h2>></a>
 </div>
+<form action="#" th:action="@{/cars}" th:object="${details}" method="post">
+    <input type="text" th:field="*{count}" th:value="20"/>
+    <input type="submit" />
+</form>
 </body>
 </html>
